@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize Name</title>
+</head>
+<body>
+
+<h2>Capitalize Name</h2>
+
+<input type="text" id="name" placeholder="Enter name">
+
+<button onclick="showName()">Show</button>
+
+<p id="result"></p>
+
+<script>
+function showName()
+{
+    let name = document.getElementById("name").value;
+
+    let capitalName = name[0].toUpperCase() + name.slice(1);
+
+    document.getElementById("result").innerHTML = capitalName;
+}
+</script>
+
+</body>
+</html>

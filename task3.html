@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Next Number</title>
+</head>
+<body>
+
+    <h2>Find Next Number</h2>
+
+    <label>Enter a Number:</label>
+    <input type="text" id="num">
+
+    <button onclick="nextNumber()">Find Next Number</button>
+
+    <p id="result"></p>
+
+    <script>
+        function nextNumber() {
+            let num = Number(document.getElementById("num").value);
+
+            let next = num + 1;
+
+            document.getElementById("result").innerHTML =
+                "Next Number = " + next;
+        }
+    </script>
+
+</body>
+</html>

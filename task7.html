@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Example</title>
+</head>
+<body>
+
+    <label>Enter First Number</label>
+    <input type="text" id="box1">
+    <br><br>
+
+    <label>Enter Second Number</label>
+    <input type="text" id="box2">
+    <br><br>
+
+    <label>Result</label>
+    <input type="text" id="result" readonly>
+
+    <script>
+        let box1 = document.getElementById("box1");
+        let box2 = document.getElementById("box2");
+        let result = document.getElementById("result");
+
+        function calculate() {
+            let a = parseInt(box1.value);
+            let b = parseInt(box2.value);
+
+            // if second box empty → NaN
+            if (box2.value === "") {
+                result.value = a;   // after first input it shows number (or NaN if empty)
+                return;
+            }
+
+            result.value = a + b;
+        }
+
+        // Event handling
+        box1.addEventListener("input", calculate);
+        box2.addEventListener("input", calculate);
+    </script>
+
+</body>
+</html>
